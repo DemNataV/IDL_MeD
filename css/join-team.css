@@ -1,0 +1,200 @@
+/* Форма \"Присоединиться к команде\" */
+.join-team-form {
+    margin-top: var(--spacing-xxl);
+    padding: var(--spacing-xl);
+    background: rgba(30, 27, 35, 0.8);
+    border-radius: 12px;
+    border: 2px solid rgba(255, 193, 7, 0.3);
+    box-shadow: 0 4px 20px rgba(255, 193, 7, 0.1);
+}
+
+.join-team-form .contact-subtitle {
+    color: var(--gold);
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+    font-size: var(--font-size-xl);
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.form-description {
+    color: var(--text-secondary);
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+    font-size: var(--font-size-md);
+    line-height: 1.6;
+}
+
+.join-team-form .form-group {
+    margin-bottom: var(--spacing-lg);
+}
+
+.file-upload {
+    position: relative;
+    border: 2px dashed rgba(255, 193, 7, 0.3);
+    border-radius: 8px;
+    padding: var(--spacing-lg);
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.file-upload:hover {
+    border-color: var(--gold);
+    background: rgba(255, 193, 7, 0.05);
+    box-shadow: 0 0 15px rgba(255, 193, 7, 0.1);
+}
+
+.file-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.file-label i {
+    font-size: 2.5rem;
+    color: var(--gold);
+    margin-bottom: var(--spacing-sm);
+    filter: drop-shadow(0 0 5px rgba(255, 193, 7, 0.3));
+}
+
+.file-upload input[type="file"] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.file-name {
+    margin-top: var(--spacing-sm);
+    color: var(--text-secondary);
+    font-size: var(--font-size-sm);
+    padding: var(--spacing-xs) var(--spacing-md);
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    border: 1px solid rgba(255, 193, 7, 0.1);
+}
+
+.join-team-btn {
+    width: 100%;
+    margin-top: var(--spacing-lg);
+    background: linear-gradient(145deg, var(--gold), #FFD54F);
+    color: var(--bg-dark);
+    font-weight: 700;
+    border: none;
+    padding: var(--spacing-lg) var(--spacing-xl);
+    font-size: var(--font-size-lg);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+.join-team-btn:hover {
+    background: linear-gradient(145deg, #FFD54F, var(--gold));
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 193, 7, 0.4);
+}
+
+.join-team-btn:active {
+    transform: translateY(-1px);
+}
+
+.join-team-btn i {
+    margin-right: var(--spacing-sm);
+    font-size: 1.2rem;
+}
+
+/* Анимация загрузки файла */
+@keyframes fileUploadPulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+.file-upload.uploading {
+    animation: fileUploadPulse 1.5s infinite;
+    border-color: var(--gold);
+}
+
+/* Сообщения о статусе */
+.form-status {
+    margin-top: var(--spacing-lg);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+    display: none;
+}
+
+.form-status.success {
+    background: rgba(76, 175, 80, 0.1);
+    border: 1px solid rgba(76, 175, 80, 0.3);
+    color: #4CAF50;
+    display: block;
+}
+
+.form-status.error {
+    background: rgba(244, 67, 54, 0.1);
+    border: 1px solid rgba(244, 67, 54, 0.3);
+    color: #F44336;
+    display: block;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .join-team-form {
+        padding: var(--spacing-lg);
+        margin-top: var(--spacing-xl);
+    }
+    
+    .join-team-form .contact-subtitle {
+        font-size: var(--font-size-lg);
+    }
+    
+    .join-team-btn {
+        padding: var(--spacing-md) var(--spacing-lg);
+        font-size: var(--font-size-md);
+    }
+    
+    .file-label i {
+        font-size: 2rem;
+    }
+}
+
+/* Стили для полей формы */
+.join-team-form input,
+.join-team-form textarea {
+    width: 100%;
+    padding: var(--spacing-md) var(--spacing-lg);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 193, 7, 0.2);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-size: var(--font-size-md);
+    font-family: var(--font-body);
+    transition: all 0.3s ease;
+}
+
+.join-team-form input:focus,
+.join-team-form textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 10px rgba(255, 193, 7, 0.2);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.join-team-form input::placeholder,
+.join-team-form textarea::placeholder {
+    color: var(--text-secondary);
+    opacity: 0.7;
+}

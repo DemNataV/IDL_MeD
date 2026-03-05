@@ -1,0 +1,311 @@
+<COMPRESSED>
+/* Swiper карусель для IDL MëD в золотой цветовой схеме */
+:root {
+    --swiper-gold: #F8E042;          /* Золото Пчелы */
+    --swiper-gold-dark: #D4B300;     /* Темное золото */
+    --swiper-gold-light: #FFF9C4;    /* Светлое золото */
+    --swiper-bg: rgba(30, 27, 35, 0.9); /* Фон как на сайте */
+    --swiper-border: rgba(248, 224, 66, 0.3); /* Золотая рамка */
+    --swiper-shadow: rgba(248, 224, 66, 0.2); /* Золотая тень */
+    --swiper-glow: rgba(248, 224, 66, 0.1); /* Золотое свечение */
+}
+
+/* Swiper контейнер с золотым акцентом */
+.swiper {
+    width: 100%;
+    height: auto;
+    margin: var(--spacing-xl) 0;
+    position: relative;
+}
+
+.swiper::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        transparent, 
+        var(--swiper-gold), 
+        transparent
+    );
+    border-radius: 1px;
+}
+
+/* Swiper слайды с золотым ховер-эффектом */
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    padding: 15px;
+    box-sizing: border-box;
+    transition: all 0.4s ease;
+}
+
+.swiper-slide:hover {
+    transform: translateY(-5px);
+}
+
+/* Карточки проектов в золотой тематике */
+.project-card {
+    width: 100%;
+    height: 100%;
+    padding: var(--spacing-lg);
+    background: var(--swiper-bg);
+    border-radius: 12px;
+    border: 2px solid var(--swiper-border);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 
+        0 4px 15px var(--swiper-shadow),
+        inset 0 0 20px var(--swiper-glow);
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(248, 224, 66, 0.1),
+        transparent
+    );
+    transition: left 0.6s ease;
+}
+
+.project-card:hover::before {
+    left: 100%;
+}
+
+.project-card:hover {
+    border-color: var(--swiper-gold);
+    box-shadow: 
+        0 8px 25px var(--swiper-shadow),
+        0 0 30px rgba(248, 224, 66, 0.15),
+        inset 0 0 30px rgba(248, 224, 66, 0.05);
+    transform: translateY(-8px) scale(1.02);
+}
+
+/* Карточки отзывов в золотой тематике */
+.testimonial-card {
+    width: 100%;
+    height: 100%;
+    padding: var(--spacing-lg);
+    background: var(--swiper-bg);
+    border-radius: 12px;
+    border: 2px solid var(--swiper-border);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 
+        0 4px 15px var(--swiper-shadow),
+        inset 0 0 20px var(--swiper-glow);
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonial-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(248, 224, 66, 0.1),
+        transparent
+    );
+    transition: left 0.6s ease;
+}
+
+.testimonial-card:hover::before {
+    left: 100%;
+}
+
+.testimonial-card:hover {
+    border-color: var(--swiper-gold);
+    box-shadow: 
+        0 8px 25px var(--swiper-shadow),
+        0 0 30px rgba(248, 224, 66, 0.15),
+        inset 0 0 30px rgba(248, 224, 66, 0.05);
+    transform: translateY(-8px) scale(1.02);
+}
+
+/* Swiper пагинация (точки) в золотом стиле */
+.swiper-pagination {
+    position: relative;
+    margin-top: var(--spacing-xl);
+    bottom: 0 !important;
+}
+
+.swiper-pagination-bullet {
+    width: 14px;
+    height: 14px;
+    background: rgba(255, 255, 255, 0.3);
+    border: 2px solid transparent;
+    opacity: 1;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 0 10px rgba(248, 224, 66, 0.3);
+}
+
+.swiper-pagination-bullet:hover {
+    background: var(--swiper-gold-light);
+    border-color: var(--swiper-gold);
+    transform: scale(1.3);
+    box-shadow: 
+        0 0 15px var(--swiper-gold),
+        0 0 20px rgba(248, 224, 66, 0.4);
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--swiper-gold);
+    border-color: var(--swiper-gold-dark);
+    transform: scale(1.4);
+    box-shadow: 
+        0 0 20px var(--swiper-gold),
+        0 0 30px rgba(248, 224, 66, 0.5),
+        inset 0 0 10px rgba(255, 255, 255, 0.3);
+    animation: gold-pulse 2s infinite alternate;
+}
+
+@keyframes gold-pulse {
+    0% {
+        box-shadow: 
+            0 0 15px var(--swiper-gold),
+            0 0 25px rgba(248, 224, 66, 0.4),
+            inset 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+    100% {
+        box-shadow: 
+            0 0 25px var(--swiper-gold),
+            0 0 35px rgba(248, 224, 66, 0.6),
+            inset 0 0 15px rgba(255, 255, 255, 0.4);
+    }
+}
+
+/* Swiper кнопки навигации в золотом стиле */
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--swiper-gold);
+    background: var(--swiper-bg);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--swiper-border);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 
+        0 4px 15px var(--swiper-shadow),
+        inset 0 0 20px var(--swiper-glow);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 22px;
+    font-weight: 900;
+    text-shadow: 0 0 10px rgba(248, 224, 66, 0.5);
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background: rgba(248, 224, 66, 0.1);
+    border-color: var(--swiper-gold);
+    color: var(--swiper-gold-light);
+    transform: translateY(-50%) scale(1.15);
+    box-shadow: 
+        0 6px 20px var(--swiper-shadow),
+        0 0 30px rgba(248, 224, 66, 0.3),
+        inset 0 0 25px rgba(248, 224, 66, 0.1);
+}
+
+.swiper-button-next {
+    right: 20px;
+}
+
+.swiper-button-prev {
+    left: 20px;
+}
+
+/* Эффект свечения для активных элементов */
+.swiper-slide-active .project-card,
+.swiper-slide-active .testimonial-card {
+    border-color: var(--swiper-gold);
+    box-shadow: 
+        0 0 20px rgba(248, 224, 66, 0.3),
+        inset 0 0 25px rgba(248, 224, 66, 0.1);
+}
+
+/* Адаптивность */
+@media (max-width: 767px) {
+    .swiper-slide {
+        padding: 10px;
+    }
+    
+    .project-card,
+    .testimonial-card {
+        padding: var(--spacing-md);
+    }
+    
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 40px;
+        height: 40px;
+        display: none; /* Скрываем на мобильных */
+    }
+    
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+        font-size: 18px;
+    }
+    
+    .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .swiper-button-next {
+        right: 10px;
+    }
+    
+    .swiper-button-prev {
+        left: 10px;
+    }
+}
+
+/* Специальные классы для каруселей IDL MëD */
+.swiper.idl-gold-theme {
+    --swiper-theme-color: var(--swiper-gold);
+}
+
+/* Анимация загрузки для карусели */
+@keyframes swiper-gold-glow {
+    0%, 100% {
+        box-shadow: 
+            0 4px 15px var(--swiper-shadow),
+            inset 0 0 20px var(--swiper-glow);
+    }
+    50% {
+        box-shadow: 
+            0 4px 20px rgba(248, 224, 66, 0.3),
+            inset 0 0 25px rgba(248, 224, 66, 0.15);
+    }
+}
+
+.project-card,
+.testimonial-card {
+    animation: swiper-gold-glow 3s infinite ease-in-out;
+}
