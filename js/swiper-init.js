@@ -204,7 +204,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (document.querySelector('.projectsSwiper')) {
         const projectsSwiper = new Swiper('.projectsSwiper', {
             slidesPerView: 1,
-            spaceBetween: 25,
+            spaceBetween: 30,
             loop: true,
             speed: 600,
             grabCursor: true,
@@ -229,19 +229,19 @@ document.addEventListener('DOMContentLoaded', function() {
             breakpoints: {
                 640: {
                     slidesPerView: 1,
-                    spaceBetween: 20
+                    spaceBetween: 40
                 },
                 768: {
                     slidesPerView: 2,
-                    spaceBetween: 25
+                    spaceBetween: 40
                 },
                 992: {
                     slidesPerView: 3,
-                    spaceBetween: 30
+                    spaceBetween: 40
                 },
                 1200: {
-                    slidesPerView: 4,
-                    spaceBetween: 35
+                    slidesPerView: 3,
+                    spaceBetween: 40
                 }
             },
             on: {
@@ -256,7 +256,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (document.querySelector('.testimonialsSwiper')) {
         const testimonialsSwiper = new Swiper('.testimonialsSwiper', {
             slidesPerView: 1,
-            spaceBetween: 25,
+            spaceBetween: 30,
             loop: true,
             speed: 600,
             grabCursor: true,
@@ -281,15 +281,15 @@ document.addEventListener('DOMContentLoaded', function() {
             breakpoints: {
                 640: {
                     slidesPerView: 1,
-                    spaceBetween: 20
+                    spaceBetween: 40
                 },
                 768: {
                     slidesPerView: 2,
-                    spaceBetween: 25
+                    spaceBetween: 40
                 },
                 992: {
                     slidesPerView: 3,
-                    spaceBetween: 30
+                    spaceBetween: 40
                 }
             },
             on: {

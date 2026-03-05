@@ -308,4 +308,53 @@
 .project-card,
 .testimonial-card {
     animation: swiper-gold-glow 3s infinite ease-in-out;
+}/* Увеличиваем ширину слайдов для 3 карточек на странице */
+@media (min-width: 1200px) {
+    .swiper-slide {
+        flex: 0 0 33.333% !important;
+        max-width: 33.333% !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .project-card {
+        padding: calc(var(--spacing-lg) * 1.2) !important;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .swiper-slide {
+        flex: 0 0 33.333% !important;
+        max-width: 33.333% !important;
+    }
+    
+    .project-card {
+        padding: calc(var(--spacing-lg) * 1.1) !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .swiper-slide {
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+    }
+}
+
+/* Увеличиваем высоту карточек проектов для лучшей пропорциональности */
+@media (min-width: 768px) {
+    .project-card {
+        min-height: 420px !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .project-card {
+        min-height: 450px !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .project-card {
+        min-height: 480px !important;
+    }
 }
